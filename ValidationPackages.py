@@ -1,6 +1,6 @@
 import re # regular expression package imported
 
-regions = {
+regions = { # Dictionary containing acronyms of brazilian states and their respective codes
     '0': ['RS'],
     '1': ['DF','GO','MS','MT','TO'],
     '2': ['AC','AM','AP','PA','RO','RR'],
@@ -57,7 +57,7 @@ def check_is_format_cpf(cpf) -> str or bool :
     number = (re.sub(r'\D', r'', number)) # cleaning the regular expression
     return number
 
-class cpf: # class that return if content is valid
+class Cpf: # class that return if content is valid
     def __init__(self, content) -> None:
         self.content = content
         return None
